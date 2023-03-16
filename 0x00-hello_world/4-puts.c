@@ -2,7 +2,7 @@
 /**
  * main - Entry point 
  * Description: 'function serves as the starting point for program execution'
- * @parameter: no parameters
+ * @void: no parameters
  * Return: Always 0 (Success)
  */
 int main(void)
