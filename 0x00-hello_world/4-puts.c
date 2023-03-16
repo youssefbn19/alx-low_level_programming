@@ -1,7 +1,12 @@
 #include <stdio.h>
-/* This is The entry point */
+/**
+ * main - Entry point 
+ * Description: 'function serves as the starting point for program execution'
+ * @parameter: no parameters
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
-	return(0);
+	return (0);
 }
