@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
  * main - Entry point 
- * Description: 'function serves as the starting point for program execution'
- * @void: no parameters
+ * Description: function serves as the starting point for program execution
  * Return: Always 0 (Success)
  */
 int main(void)
@@ -10,3 +9,4 @@ int main(void)
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
+
