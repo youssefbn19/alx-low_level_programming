@@ -21,7 +21,7 @@ int main(void)
 			{
 				while (ld <= 57)
 				{
-					if (sd == ld && fd == td)
+					if ((fd + sd) >= (td + ld))
 					{
 						ld++;
 						continue;
