@@ -12,7 +12,7 @@ int main(void)
 	while (sd <= 57)
 	{
 		putchar(sd);
-		if(sd != 57)
+		if (sd != 57)
 		{
 			putchar(',');
 			putchar(' ');
