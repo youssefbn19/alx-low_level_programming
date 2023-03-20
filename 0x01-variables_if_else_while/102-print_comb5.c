@@ -7,37 +7,27 @@
  */
 int main(void)
 {
-	int fd, sd, td, ld;
+	int fd, sd;
 
-	fd = 48;
-	ld = 49;
-	while (fd <= 57)
+	fd = 0;
+	while (fd < 99)
 	{
-		sd = 48;
-		while (sd < 57)
+		sd = fd + 1;
+		while (sd <= 99)
 		{
-			td = 48;
-			while (td <= 57)
+			putchar((fd / 10) + 48);
+			putchar((fd % 10) + 48);
+			putchar(' ');
+			putchar((sd / 10) + 48);
+			putchar((sd % 10) + 48);
+			if (fd == 98 && sd == 99)
 			{
-				while (ld <= 57)
-				{
-					if ((fd + sd) >= (td + ld))
-					{
-						ld++;
-						continue;
-					}
-					putchar(fd);
-					putchar(sd);
-					putchar(' ');
-					putchar(td);
-					putchar(ld);
-					putchar(',');
-					putchar(' ');
-					ld++;
-				}
-				ld = 48;
-				td++;
+				sd++;
+				continue;
 			}
+
+			putchar(',');
+			putchar(' ');
 			sd++;
 		}
 		fd++;
