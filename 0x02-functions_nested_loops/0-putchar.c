@@ -6,7 +6,7 @@
  *using _putchar funtion followed by a new line
  *Return: 0 Always On Success
  */
-int main(void)
+main()
 {
 	_putchar('_');
 	_putchar('p');
