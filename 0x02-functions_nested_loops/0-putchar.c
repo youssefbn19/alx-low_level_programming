@@ -1,9 +1,10 @@
 #include "_putchar.h"
+#include "main.h"
 /**
- *
- *
- *
- *
+ *main - Entry point
+ *Description: prints _putchar word character by character
+ *using _putchar funtion followed by a new line
+ *Return: 0 Always On Success
  */
 int main(void)
 {
