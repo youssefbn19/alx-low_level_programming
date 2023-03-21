@@ -1,11 +1,11 @@
-#include "_putchar.h"
+#include "main.h"
 /**
  *putchar - Print _putchar word
  *Description: prints _putchar word character by character
  *using _putchar funtion followed by a new line
  *Return: 0 Always On Success
  */
-int putchar()
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
