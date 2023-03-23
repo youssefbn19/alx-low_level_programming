@@ -5,7 +5,7 @@
   * @a: first integer
   * @b: second integer
   * @c: third integer
-  * Return: largest number
+  * Return: largest number, 0 if the 3 numbers are equal
   */
 
 int largest_number(int a, int b, int c)
@@ -23,6 +23,10 @@ int largest_number(int a, int b, int c)
 	else if (c > a && c > b)
 	{
 		largest = c;
+	}
+	else
+	{
+		return (0);
 	}
 
 	return (largest);
