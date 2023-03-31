@@ -5,23 +5,24 @@
  *@dest: first string
  *@src: second string
  *
- *Return: string
+ *Return: Pointer to `dest`
  */
 
 char *_strcat(char *dest, char *src)
 {
-	int len = 0;
-	int i;
+	int i, j;
 
-	for (i = 0; i < sizeof(dest); i++)
-	{
-		if (dest[i] == '\0')
-			break;
-		len++;
-	}
+	j = 0;
+	while (dest[j] != '\0')
+		j++;
+
 	for (i = 0; src[i] != '\0'; i++)
-		dest[len + i] = src[i];
+	{
+		dest[j + i] = src[i];
+	}
 
-	dest[len + i] = '\0';
+	dest[j + i] = '\0';
+
 	return (dest);
+
 }
