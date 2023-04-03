@@ -2,7 +2,7 @@
  *_memcpy - copies memory area;
  *
  *@dest: string copies with the `src`
- *@src: source string 
+ *@src: source string
  *@n: number of bytes
  *
  *Return: a pointer to the memory area `dest`
