@@ -3,7 +3,7 @@
  *
  *@s: string
  *
- *Return: return the length of a string
+ *Return: return the length of a `s` string
  */
 int _strlen_recursion(char *s)
 {
