@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 /**
  * main - prints the result of the sum of
  *the numbers of the command line arguments
@@ -19,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (atoi(argv[i]) == 0)
+			if (!isdigit(*argv[i]))
 			{
 				printf("Error\n");
 				return (1);
