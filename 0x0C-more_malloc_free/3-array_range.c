@@ -1,11 +1,11 @@
 #include <stdlib.h>
 /**
+ * array_range - creates an array of integers
  *
+ * @min: min value in the array
+ * @max: max value int the array
  *
- *
- *
- *
- *
+ * Return: the pointer to the newly created array. NULL if it fails
  */
 int *array_range(int min, int max)
 {
@@ -14,7 +14,7 @@ int *array_range(int min, int max)
 
 	if (min > max)
 		return (NULL);
-	
+
 	avg = max - min + 1;
 	ptr = malloc(avg * sizeof(int));
 
