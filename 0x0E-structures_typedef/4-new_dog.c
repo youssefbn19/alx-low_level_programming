@@ -18,12 +18,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 	i = 0;
-	while (*(name + i))
+	while (*(name + i) != '\0')
 		i++;
 	len_name = i;
 
 	i = 0;
-	while (*(owner + i))
+	while (*(owner + i) != '\0')
 		i++;
 	len_owner = i;
 
