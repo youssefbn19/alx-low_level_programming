@@ -11,16 +11,21 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t  *detect = NULL, *lastNode = NULL;
+	listint_t  *slow = NULL, *fast = NULL;
 
 	if (head == NULL)
 		return (NULL);
 
-	detect = detect_cycle(head);
+	slow = head;
+	fast = head;
 
-	if (detect == NULL)
-		return (NULL);
+	while (slow && fast && fast->next)
+	{
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
+			return (fast);
+	}
 
-	lastNode = last_node(head, detect);
-	return (lastNode->next);
+	return (NULL);
 }
