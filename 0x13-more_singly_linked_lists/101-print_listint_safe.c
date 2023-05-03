@@ -10,9 +10,9 @@
  * Return: pointer to the last node in the listint_t linked ist
  *
  */
-const listint_t *last_node(const listint_t *head, const listint_t *detect)
+listint_t *last_node(listint_t *head, listint_t *detect)
 {
-	const listint_t *temp = NULL;
+	listint_t *temp = NULL;
 
 	temp = head;
 	while (temp->next != detect->next)
@@ -30,9 +30,9 @@ const listint_t *last_node(const listint_t *head, const listint_t *detect)
  *
  * Return: pointer if a cycle is detected, NULL if not detected
  */
-const listint_t *detect_cycle(const listint_t *head)
+listint_t *detect_cycle(listint_t *head)
 {
-	const listint_t *slow_node = NULL, *fast_node = NULL;
+	listint_t *slow_node = NULL, *fast_node = NULL;
 
 	if (head == NULL)
 		return (NULL);
@@ -59,14 +59,14 @@ const listint_t *detect_cycle(const listint_t *head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *temp = NULL, *detect = NULL, *lastNode = NULL;
+	listint_t *temp = NULL, *detect = NULL, *lastNode = NULL;
 	size_t len = 0;
 
 	if (head == NULL)
 		exit(98);
 
-	temp = head;
-	detect = detect_cycle(head);
+	temp = (void *)head;
+	detect = detect_cycle(temp);
 	if (detect == NULL)
 	{
 		while (temp)
@@ -78,7 +78,7 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	else
 	{
-		lastNode = last_node(head, detect);
+		lastNode = last_node(temp, detect);
 		while (temp != lastNode)
 		{
 			printf("[%p] %d\n", (void *)temp, temp->n);
