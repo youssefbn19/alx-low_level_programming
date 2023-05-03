@@ -83,9 +83,11 @@ size_t print_listint_safe(const listint_t *head)
 		{
 			printf("[%p] %d\n", (void *)temp, temp->n);
 			temp = temp->next;
+			len++;
 		}
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		printf("->[%p] %d\n", (void *)(lastNode->next), (lastNode->next->n));
+		len++;
 	}
 
 	return (len);
