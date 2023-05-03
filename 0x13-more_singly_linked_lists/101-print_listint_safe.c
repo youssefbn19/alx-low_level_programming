@@ -63,7 +63,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t len = 0;
 
 	if (head == NULL)
-		return (0);
+		exit(98);
 
 	temp = head;
 	detect = detect_cycle(head);
@@ -86,7 +86,6 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		printf("[%p] %d\n", (void *)temp, temp->n);
 		printf("->[%p] %d\n", (void *)(lastNode->next), (lastNode->next->n));
-		exit(98);
 	}
 
 	return (len);
