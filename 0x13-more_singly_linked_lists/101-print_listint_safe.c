@@ -59,7 +59,7 @@ const listint_t *detect_cycle(const listint_t *head)
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *temp = NULL, *detect = NULL, *last_node = NULL;
+	const listint_t *temp = NULL, *detect = NULL, *lastNode = NULL;
 	size_t len = 0;
 
 	if (head == NULL)
@@ -78,14 +78,14 @@ size_t print_listint_safe(const listint_t *head)
 	}
 	else
 	{
-		last_node = last_node(head, detect);
-		while (temp != last_node)
+		lastNode = last_node(head, detect);
+		while (temp != lastNode)
 		{
 			printf("[%p] %d\n", (void *)temp, temp->n);
 			temp = temp->next;
 		}
 		printf("[%p] %d\n", (void *)temp, temp->n);
-		printf("->[%p] %d\n", (void *)(last_node->next), (last_node->next->n));
+		printf("->[%p] %d\n", (void *)(lastNode->next), (lastNode->next->n));
 		exit(98);
 	}
 
