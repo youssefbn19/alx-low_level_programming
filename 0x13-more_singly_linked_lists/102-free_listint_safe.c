@@ -10,7 +10,7 @@
  */
 size_t free_listint_safe(listint_t **h)
 {
-	const listint_t *temp = NULL, *detect = NULL, *lastNode = NULL;
+	listint_t *temp = NULL, *detect = NULL, *lastNode = NULL;
 	size_t len = 0;
 
 	if (h == NULL || *h == NULL)
