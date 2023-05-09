@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 /**
- * create_file - creates a file descriptor
+ * create_file - creates a new file descriptor
  *
  * @filename: file name
  * @text_content: file content
