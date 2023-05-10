@@ -13,7 +13,7 @@
  */
 void error_file(char *err, char *str, int ex)
 {
-	char msg[1024];
+	char msg[100];
 	int len = 0, i = 0;
 
 
