@@ -10,7 +10,6 @@
 hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *hash_t = NULL;
-	unsigned long int i = 0;
 
 	if (size == 0)
 	{
@@ -32,8 +31,6 @@ hash_table_t *hash_table_create(unsigned long int size)
 		fprintf(stderr, "Can't allocate memory");
 		return (NULL);
 	}
-	for (; i < size; i++)
-		hash_t->array[i] = NULL;
 
 	return (hash_t);
 }
